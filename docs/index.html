@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual de construcción DRO ESP32</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 32px; color: #1f2a44; }
+    h1, h2, h3 { color: #0f172a; }
+    ul { margin-bottom: 1rem; }
+    .tareas ul { list-style: square; }
+    .nota { font-style: italic; color: #475569; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manual de construcción del visualizador de cotas DRO con ESP32</h1>
+    <p>Este documento es el índice maestro del manual. Resume las fases necesarias para construir, verificar y documentar un DRO basado en ESP32, cubriendo desde el hardware hasta el software.</p>
+    <p class="nota">Estructura pensada para generar documentación paso a paso en HTML. Cada sección será ampliada con instrucciones detalladas, esquemas y fotografías durante el desarrollo.</p>
+  </header>
+
+  <section>
+    <h2>Índice detallado de fases</h2>
+    <ol>
+      <li>
+        <strong>Visión general y alcance</strong>
+        <ul>
+          <li>Objetivos del proyecto y requisitos de precisión.</li>
+          <li>Arquitectura general: sensores lineales, ESP32, pantalla y alimentación.</li>
+          <li>Resumen de estándares de seguridad y terminología clave.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Preparación del taller y seguridad</strong>
+        <ul>
+          <li>Checklist de EPI (gafas, guantes, extracción de polvo) y normas de trabajo seguro.</li>
+          <li>Organización del banco de trabajo y gestión de cables.</li>
+          <li>Procedimientos de verificación eléctrica previa a pruebas.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Herramientas y utillaje</strong>
+        <ul>
+          <li>Listado de herramientas básicas: soldador, multímetro, calibres, taladro, impresora 3D.</li>
+          <li>Creación de utillaje específico: soportes para sensores, plantillas de taladrado, fijaciones impresas.</li>
+          <li>Recomendaciones de consumibles (estaño, conectores, cables apantallados).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Diseño mecánico del montaje</strong>
+        <ul>
+          <li>Elección y dimensiones de la carcasa: impresa 3D, aluminio o acrílico.</li>
+          <li>Distribución física de componentes: ESP32, pantalla, botones y conectores.</li>
+          <li>Gestión térmica y de vibraciones; rutas de ventilación y aislamiento.</li>
+          <li>Planos y archivos CAD de referencia.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Electrónica y conexiones</strong>
+        <ul>
+          <li>Lista de materiales (BOM) con especificaciones: ESP32, pantalla, reguladores, sensores de escala.</li>
+          <li>Esquema eléctrico: alimentación, filtrado, masa, protección ESD.</li>
+          <li>Conectado de escalas (TTL/RS422) y adaptadores de nivel.</li>
+          <li>Diseño de PCB o protoboard: rutas críticas, decoupling, conectores.</li>
+          <li>Pruebas de continuidad y verificación de polaridades antes de energizar.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Fabricación y ensamblaje</strong>
+        <ul>
+          <li>Fabricación o impresión de piezas mecánicas y su post-procesado.</li>
+          <li>Soldadura y preparación de cables y conectores.</li>
+          <li>Montaje final: orden de ensamblaje, pares de apriete y fijaciones.</li>
+          <li>Inspección visual y pruebas de tensión/corriente en vacío.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Firmware y software</strong>
+        <ul>
+          <li>Entorno de desarrollo (PlatformIO/Arduino) y dependencias.</li>
+          <li>Configuración de pines, lectura de escalas y gestión de interrupciones.</li>
+          <li>Renderizado de UI en pantalla: lectura de ejes, offsets, unidades.</li>
+          <li>Comunicación y actualizaciones OTA; registro de eventos.</li>
+          <li>Pruebas unitarias y validación funcional en banco.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Calibración y verificación metrológica</strong>
+        <ul>
+          <li>Procedimientos de referencia cero y alineación de escalas.</li>
+          <li>Comparación contra patrones conocidos (bloques patrón, comparador).</li>
+          <li>Ajuste de compensaciones térmicas y resolución.</li>
+          <li>Generación de informe de errores y tabla de corrección.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Pruebas de campo y fiabilidad</strong>
+        <ul>
+          <li>Ensayos de ruido eléctrico y estabilidad de lectura.</li>
+          <li>Pruebas de stress: vibración, ciclos térmicos y alimentación inestable.</li>
+          <li>Checklist de aceptación y criterios de paso/fallo.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Documentación final y mantenimiento</strong>
+        <ul>
+          <li>Guía de usuario: encendido, uso diario, resolución de problemas.</li>
+          <li>Plan de mantenimiento preventivo y limpieza.</li>
+          <li>Bitácora de calibraciones y registro de cambios de firmware.</li>
+          <li>Formato de entrega en HTML con referencias cruzadas, imágenes y anexos.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section class="tareas">
+    <h2>Tareas necesarias para completar el manual</h2>
+    <ul>
+      <li>Redactar cada fase con instrucciones paso a paso y fotos de referencia.</li>
+      <li>Generar esquemas eléctricos y BOM verificable con proveedores y alternativas.</li>
+      <li>Preparar archivos CAD/ STL y guías de impresión o mecanizado.</li>
+      <li>Documentar configuraciones de firmware, comandos y parámetros de calibración.</li>
+      <li>Crear checklists de pruebas y plantillas de informes en formato HTML.</li>
+      <li>Revisar la documentación con pruebas reales y capturas de pantalla del sistema en funcionamiento.</li>
+    </ul>
+  </section>
+</body>
+</html>
